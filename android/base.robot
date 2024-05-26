@@ -12,6 +12,8 @@ Resource    pages/pixPage.robot
 Resource    pages/pagarPage.robot
 Resource    pages/transferirPage.robot
 Resource    pages/depositarPage.robot
+Resource    pages/emprestimoPage.robot
+Resource    pages/recargaCelularPage.robot
 
 # Features:
 # Resource    features/paginaInicial.robot

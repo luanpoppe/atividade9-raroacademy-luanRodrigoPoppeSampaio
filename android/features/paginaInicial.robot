@@ -24,13 +24,59 @@ Usuário deve conseguir acessar a seção de pagar
     E acesso a seção de pagar
     Então deve ser possível ver as informações sobre a seção de pagar
 
-Usuário deve conseguir acessar a seção de transferir
+Usuário deve conseguir acessar a seção de transferir e digitar um valor a ser transferido
     Quando acesso a página inicial do Aplicativo
     E acesso a seção de transferir
     Então deve ser possível ver as informações sobre a seção de transferir
     E digitar um valor a ser transferido
 
+Usuário não deve conseguir digitar um valor a ser transferido com mais de 14 números
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de transferir
+    E tento digitar um valor com mais de 14 dígitos
+    Então só os primeiros 14 dígitos serão mostrados no valor para transferência
+
+Usuário não deve conseguir digitar letras no valor a ser transferido
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de transferir
+    E tento digitar letras como valor a ser transferido
+    Então as letras digitadas não devem ser consideradas para a transferência
+
 Usuário deve conseguir acessar a seção de depositar
     Quando acesso a página inicial do Aplicativo
     E acesso a seção de depositar
     Então deve ser possível ver as informações sobre depósitos
+
+Usuário deve conseguir acessar a seção de empréstimo
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de empréstimos
+    Então deve ser possível ver as informações sobre empréstimo
+
+Usuário que não possui empréstimos deve ver uma mensagem o informando disso na seção de empréstimos
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de empréstimos
+    Então deve ser possível ver a mensagem informando que o usuário não possui empréstimos
+
+Usuário deve conseguir acessar a seção de recarga de celular
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de recarga de celular
+    Então usuário deve ver a instrução da recarga
+    E deve ser possível digitar qual o número será carregado
+
+Na seção de recarregar celular não deve ser possível digitar um número de telefone contendo letras 
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de recarga de celular
+    E usuário tenta digitar um número de telefone contendo letras
+    Então as letras digitadas não devem ser consideradas para a recarga
+
+Na seção de recarregar celular não deve ser possível digitar mais do que 11 números
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de recarga de celular
+    E usuário tenta digitar um número de telefone com mais de 11 números
+    Então o número considerado só irá conter os primeiros 11 valores digitados
+
+Usuário deve conseguir acessar a seção de recarga de celular
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de recarga de celular
+    Então usuário deve ver a instrução da recarga
+    E deve ser possível digitar qual o número será carregado

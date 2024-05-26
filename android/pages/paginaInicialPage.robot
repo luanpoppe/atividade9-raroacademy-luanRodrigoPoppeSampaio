@@ -9,6 +9,14 @@ ${botaoPix}    xpath=//android.widget.ScrollView/android.widget.HorizontalScroll
 ${botaoPagar}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
 ${botaoTransferir}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
 ${botaoDepositar}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${botaoEmprestimo}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
+
+# Próximos botões só funcionam se for realizado o swipe antes com o "Swipe dos botões iniciais"
+${botaoRecargaCelular}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${botaoCobrar}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${botaoDoacao}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${botaoEncontrarAtalhos}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
+
 ${mensagemDisponivelEmprestimo}    xpath=//android.view.View[contains(@content-desc, "disponíveis para empréstimo.")]
 ${mensagemFaturaAtual}    xpath=//android.view.View[contains(@content-desc, "Fatura atual")]
 
@@ -17,7 +25,19 @@ ${botaoMeusCartoes}    xpath=//android.view.View[@content-desc="Meus cartões"]
 
 
 
+
 *** Keywords ***
+
+Swipe dos botões iniciais
+    Swipe By Percent    75    40    0    40
+    Swipe By Percent    75    40    0    40
+    Wait Until Page Contains    Encontrar atalhos
+
+Clicar em Recarga de Celular
+    Swipe dos botões iniciais
+    Click Element    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+
+# BDD
 Quando acesso a página inicial do Aplicativo
     Wait Until Page Contains Element    ${secaoBotoes}
     Wait Until Page Contains Element    ${botaoMeusCartoes}
@@ -47,3 +67,16 @@ E acesso a seção de transferir
 
 E acesso a seção de depositar
     Click Element    ${botaoDepositar}
+
+E acesso a seção de empréstimos
+    Click Element    ${botaoEmprestimo}
+
+E acesso a seção de recarga de celular
+    Clicar em Recarga de Celular
+
+E acesso a seção de "cobrar"
+    Log    message
+E acesso a seção de doação
+    Log    message
+E acesso a seção de encontrar atalhos
+    Log    message
