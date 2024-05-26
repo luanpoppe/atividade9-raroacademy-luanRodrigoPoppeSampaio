@@ -44,3 +44,6 @@ E acesso a seção de pagar
 
 E acesso a seção de transferir
     Click Element    ${botaoTransferir}
+
+E acesso a seção de depositar
+    Click Element    ${botaoDepositar}

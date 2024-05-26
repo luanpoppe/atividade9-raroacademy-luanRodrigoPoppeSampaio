@@ -29,3 +29,8 @@ Usuário deve conseguir acessar a seção de transferir
     E acesso a seção de transferir
     Então deve ser possível ver as informações sobre a seção de transferir
     E digitar um valor a ser transferido
+
+Usuário deve conseguir acessar a seção de depositar
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de depositar
+    Então deve ser possível ver as informações sobre depósitos
