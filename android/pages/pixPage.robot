@@ -12,7 +12,7 @@ ${botaoMeAjuda}    xpath=//android.view.View[@content-desc="Me ajuda"]
 
 *** Keywords ***
 
-Então devo ver as informações sobre a funcionalidade de pix
+Então deve ser possível ver as informações sobre a funcionalidade de pix
     Wait Until Page Contains Element    ${telaPix}
     Page Should Contain Element    ${telaPix}
     ${texto}=    Get Element Content Desc    ${telaPix}

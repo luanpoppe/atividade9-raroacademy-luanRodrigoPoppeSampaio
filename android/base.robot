@@ -9,6 +9,8 @@ Resource    utils/commons.robot
 Resource    pages/paginaInicialPage.robot
 Resource    pages/indicacaoAmigosPage.robot
 Resource    pages/pixPage.robot
+Resource    pages/pagarPage.robot
+Resource    pages/transferirPage.robot
 
 # Features:
 # Resource    features/paginaInicial.robot

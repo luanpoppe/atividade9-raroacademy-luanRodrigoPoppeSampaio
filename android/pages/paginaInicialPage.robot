@@ -38,3 +38,9 @@ E clico no botão de indicar amigos
 
 E acesso a funcionalidade do pix
     Click Element    ${botaoPix}
+
+E acesso a seção de pagar
+    Click Element    ${botaoPagar}
+
+E acesso a seção de transferir
+    Click Element    ${botaoTransferir}
