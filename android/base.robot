@@ -3,5 +3,12 @@
 Library    AppiumLibrary
 
 Resource    utils/config.robot
-Resource    features/paginaInicial.robot
-Resource    pages/paginaInicial.robot
+Resource    utils/commons.robot
+
+# Pages
+Resource    pages/paginaInicialPage.robot
+Resource    pages/indicacaoAmigosPage.robot
+Resource    pages/pixPage.robot
+
+# Features:
+# Resource    features/paginaInicial.robot

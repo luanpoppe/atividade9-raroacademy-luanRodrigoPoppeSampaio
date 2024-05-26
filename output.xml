@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-26T14:38:50.606723" rpa="false" schemaversion="5">
+<suite id="s1" name="paginaInicial" source="c:\Programação\Tests\Curso Raro\Exercício 09\android\features\paginaInicial.robot">
+<test id="s1-t1" name="Usuário deve conseguir acessar a funcionalidade de pix" line="17">
+<kw name="Abrir App" owner="config" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://127.0.0.1:4723</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-26T14:38:50.811732" elapsed="11.811157"/>
+</kw>
+<status status="PASS" start="2024-05-26T14:38:50.810733" elapsed="11.812156"/>
+</kw>
+<kw name="Quando acesso a página inicial do Aplicativo" owner="paginaInicialPage">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:03.282929" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]</msg>
+<arg>${secaoBotoes}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-26T14:39:02.624892" elapsed="0.659038"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:03.442440" level="INFO">xpath criteria: //android.view.View[@content-desc="Meus cartões"]</msg>
+<arg>${botaoMeusCartoes}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-26T14:39:03.283930" elapsed="0.158510"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:03.512439" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "disponíveis para empréstimo.")]</msg>
+<arg>${mensagemDisponivelEmprestimo}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-26T14:39:03.442440" elapsed="0.069999"/>
+</kw>
+<status status="PASS" start="2024-05-26T14:39:02.623890" elapsed="0.888549"/>
+</kw>
+<kw name="E acesso a funcionalidade do pix" owner="paginaInicialPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:03.515440" level="INFO">Clicking element 'xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]'.</msg>
+<msg time="2024-05-26T14:39:03.659958" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]</msg>
+<arg>${botaoPix}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-26T14:39:03.513439" elapsed="0.147519"/>
+</kw>
+<status status="PASS" start="2024-05-26T14:39:03.513439" elapsed="0.147519"/>
+</kw>
+<kw name="Então devo ver as informações sobre a funcionalidade de pix" owner="pixPage">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.288732" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]
+xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]
+xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]
+xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]</msg>
+<arg>${telaPix}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-26T14:39:03.660958" elapsed="1.628774"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.336733" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@content-desc,"Minha área Pix")]'.</msg>
+<msg time="2024-05-26T14:39:05.336733" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]</msg>
+<arg>${telaPix}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.289732" elapsed="0.047001"/>
+</kw>
+<kw name="Get Element Content Desc" owner="commons">
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.402733" level="INFO">Element 'xpath=//android.widget.ImageView[contains(@content-desc,"Minha área Pix")]' attribute 'content-desc' value 'Minha área Pix
+Tudo o que você precisa para pagar, transferir ou cobrar.
+Pagar
+Transferir
+Cobrar' </msg>
+<msg time="2024-05-26T14:39:05.402733" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]</msg>
+<msg time="2024-05-26T14:39:05.402733" level="INFO">${texto} = Minha área Pix
+Tudo o que você precisa para pagar, transferir ou cobrar.
+Pagar
+Transferir
+Cobrar</msg>
+<var>${texto}</var>
+<arg>${elemento}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-26T14:39:05.336733" elapsed="0.066000"/>
+</kw>
+<return>
+<value>${texto}</value>
+<status status="PASS" start="2024-05-26T14:39:05.402733" elapsed="0.000999"/>
+</return>
+<msg time="2024-05-26T14:39:05.403732" level="INFO">${texto} = Minha área Pix
+Tudo o que você precisa para pagar, transferir ou cobrar.
+Pagar
+Transferir
+Cobrar</msg>
+<var>${texto}</var>
+<arg>${telaPix}</arg>
+<status status="PASS" start="2024-05-26T14:39:05.336733" elapsed="0.066999"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Tudo o que você precisa para pagar, transferir ou cobrar.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.403732" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Pagar</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.403732" elapsed="0.001000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Transferir</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.404732" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Cobrar</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.404732" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.461735" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@content-desc,"Minha área Pix")]/android.widget.Button[2]'.</msg>
+<msg time="2024-05-26T14:39:05.461735" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]/android.widget.Button[2]</msg>
+<arg>${botaoPagarPix}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.404732" elapsed="0.057003"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.509736" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@content-desc,"Minha área Pix")]/android.widget.Button[3]'.</msg>
+<msg time="2024-05-26T14:39:05.510733" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]/android.widget.Button[3]</msg>
+<arg>${botaoTransferirPix}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.462732" elapsed="0.048001"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.550733" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[contains(@content-desc,"Minha área Pix")]/android.widget.Button[4]'.</msg>
+<msg time="2024-05-26T14:39:05.551736" level="INFO">xpath criteria: //android.widget.ImageView[contains(@content-desc,"Minha área Pix")]/android.widget.Button[4]</msg>
+<arg>${botaoCobrar}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.510733" elapsed="0.041003"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.601732" level="INFO">Current page contains element 'xpath=//android.view.View[@content-desc="Minhas chaves"]'.</msg>
+<msg time="2024-05-26T14:39:05.602732" level="INFO">xpath criteria: //android.view.View[@content-desc="Minhas chaves"]</msg>
+<arg>${botaoMinhasChaves}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.551736" elapsed="0.050996"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.646245" level="INFO">Current page contains element 'xpath=//android.view.View[@content-desc="Meu limite Pix"]'.</msg>
+<msg time="2024-05-26T14:39:05.646245" level="INFO">xpath criteria: //android.view.View[@content-desc="Meu limite Pix"]</msg>
+<arg>${botaoMeuLimitePix}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.602732" elapsed="0.044514"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-05-26T14:39:05.695756" level="INFO">Current page contains element 'xpath=//android.view.View[@content-desc="Me ajuda"]'.</msg>
+<msg time="2024-05-26T14:39:05.695756" level="INFO">xpath criteria: //android.view.View[@content-desc="Me ajuda"]</msg>
+<arg>${botaoMeAjuda}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.647246" elapsed="0.048510"/>
+</kw>
+<status status="PASS" start="2024-05-26T14:39:03.660958" elapsed="2.034798"/>
+</kw>
+<kw name="Teardown" owner="config" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.696757" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Applications" owner="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" start="2024-05-26T14:39:05.697757" elapsed="0.990019"/>
+</kw>
+<status status="PASS" start="2024-05-26T14:39:05.696757" elapsed="0.991019"/>
+</kw>
+<status status="PASS" start="2024-05-26T14:38:50.810733" elapsed="15.877043"/>
+</test>
+<status status="PASS" start="2024-05-26T14:38:50.611721" elapsed="16.077056"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="paginaInicial">paginaInicial</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

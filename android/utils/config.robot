@@ -3,7 +3,6 @@
 Resource   ../base.robot
 
 *** Variables ***
-# ${PREFIXO}                    com.google.android.calculator:id
 ${ANDROID_AUTOMATION_NAME}    UIAutomator2
 ${ANDROID_PLATFORM_VERSION}    11
 ${APP_PACKAGE}                com.ricardodalarme.nubank_clone
