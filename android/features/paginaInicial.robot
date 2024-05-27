@@ -135,3 +135,26 @@ Usuário deve poder acessar a seção de empréstimo acessando a funcionalidade 
 
 Usuário deve poder acessar a seção de investimentos e visualizar as informações sobre tal funcionalidade
     Quando acesso a página inicial do Aplicativo
+    E acesso a funcionalidade de investimentos ao scrollar para baixo
+    Então deve ser possível ver as informações sobre investimentos
+
+Usuário deve poder acessar a seção de investimentos clicando no botão de conhecer investimentos
+    Quando acesso a página inicial do Aplicativo
+    E acesso a funcionalidade de investimentos clicando no botão de conhecer investimentos ao scrollar para baixo
+    Então deve ser possível ver as informações sobre investimentos
+
+Usuário deve poder ver a funcionalidade de acessar a seção de seguro de vida
+    Quando acesso a página inicial do Aplicativo
+    E scrollo para baixo até o final do app
+    Então consigo ver a funcionalidade de seguro de vida
+
+Usuário deve ver seção de descobrir mais funcionalidades ao fim do aplicativo
+    Quando acesso a página inicial do Aplicativo
+    E scrollo para baixo até o final do app
+    Então deve ser possível visualizar as seções
+
+Usuário deve conseguir acessar a seção de indicar para amigos através da seção de descubra mais ao scrollar o app para todo para baixo
+    Quando acesso a página inicial do Aplicativo
+    E scrollo para baixo até o final do app
+    E clico na funcionalidade de indicar amigos
+    Então devo ver as informações sobre a funcionalidade de indicação e amigos

@@ -16,6 +16,7 @@ Resource    pages/emprestimoPage.robot
 Resource    pages/recargaCelularPage.robot
 Resource    pages/cobrarPage.robot
 Resource    pages/cartaoCreditoPage.robot
+Resource    pages/investimentosPage.robot
 
 # Features:
 # Resource    features/paginaInicial.robot

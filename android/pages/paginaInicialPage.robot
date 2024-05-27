@@ -24,6 +24,10 @@ ${mensagemPlanosFuturos}    xpath=//android.view.View[@content-desc="Conquiste p
 ${secaoBotoes}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]
 ${botaoMeusCartoes}    xpath=//android.view.View[@content-desc="Meus cartões"]
 
+# Elementos do Descubra Mais
+${tituloDescubraMais}    xpath=//android.view.View[@content-desc="Descubra mais"]
+${informacoesWhatsapp}    xpath=//android.view.View[@content-desc="WhatsApp\nNovo\nPagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa."]
+${informacoesIndiqueSeusAmigos}    xpath=//android.view.View[@content-desc="Indique seus amigos\nMostre aos seus amigos como é fácil ter uma vida sem burocracia."]
 
 
 
@@ -48,6 +52,10 @@ E tento visualizar todos os botões do carrousel de botões
 Acessar a seção de investimentos
     Swipe para cima Y
     Click Element    xpath=//android.view.View[@content-desc="Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital."]
+
+Acessar a seção de seguro de vida
+    Swipe para cima Y
+    Click Element    xpath=//android.view.View[@content-desc="Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso."]
 
 # BDD
 Quando acesso a página inicial do Aplicativo
@@ -122,3 +130,28 @@ E acesso a funcionalidade que mostra as informações sobre cartão de crédito
 E acesso a funcionalidade de empréstimo vista ao scrollar para baixo
     Swipe para cima Y
     Click Element    xpath=//android.view.View[contains(@content-desc,"Empréstimo\nValor disponível de até")]
+
+E acesso a funcionalidade de investimentos ao scrollar para baixo
+    Acessar a seção de investimentos
+
+E acesso a funcionalidade de investimentos clicando no botão de conhecer investimentos ao scrollar para baixo
+    Swipe para cima Y
+    Click Element    xpath=//android.view.View[@content-desc="Conhecer"]
+
+E scrollo para baixo até o final do app
+    Swipe para cima Y
+    Swipe para cima Y
+
+Então consigo ver a funcionalidade de seguro de vida
+    Element Should Be Visible    xpath=//android.view.View[@content-desc="Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso."]
+
+Então deve ser possível visualizar as seções
+    Element Should Be Visible    ${tituloDescubraMais}
+    Element Should Be Visible    ${informacoesWhatsapp}
+    Swipe para esquerda X    10    85    90
+    Element Should Be Visible    ${informacoesIndiqueSeusAmigos}
+
+E clico na funcionalidade de indicar amigos
+    Wait Until Element Is Visible    ${informacoesIndiqueSeusAmigos}
+    Swipe para esquerda X    10    85    90
+    Click Element    xpath=//android.view.View[@content-desc="Indicar amigos"]
