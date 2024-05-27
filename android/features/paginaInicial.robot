@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../utils/config.robot
+Resource    ../base.robot
 
 Test Setup        Abrir App
 Test Teardown     Teardown    
@@ -127,3 +127,11 @@ Usuário deve conseguir acessar a seção de cartão de crédito de sua conta
     Então deve ser possível ver informações sobre a fatura atual
     E deve ser possível ver as opções referentes à fatura e cartões de crédito
     E deve ser possível ver o histórico de transferências
+
+Usuário deve poder acessar a seção de empréstimo acessando a funcionalidade vista ao scrollar pra baixa
+    Quando acesso a página inicial do Aplicativo
+    E acesso a funcionalidade de empréstimo vista ao scrollar para baixo
+    Então deve ser possível ver as informações sobre empréstimo
+
+Usuário deve poder acessar a seção de investimentos e visualizar as informações sobre tal funcionalidade
+    Quando acesso a página inicial do Aplicativo

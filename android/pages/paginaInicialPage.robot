@@ -45,6 +45,10 @@ Clicar em cobrar
 E tento visualizar todos os botões do carrousel de botões
     Swipe dos botões iniciais
 
+Acessar a seção de investimentos
+    Swipe para cima Y
+    Click Element    xpath=//android.view.View[@content-desc="Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital."]
+
 # BDD
 Quando acesso a página inicial do Aplicativo
     Wait Until Page Contains Element    ${secaoBotoes}
@@ -115,11 +119,6 @@ Então deve ser possível visualizar a mensagem em questão
 E acesso a funcionalidade que mostra as informações sobre cartão de crédito
     Click Element    ${mensagemFaturaAtual}
 
-Então deve ser possível ver informações sobre a fatura atual
-    Log    message
-
-E deve ser possível ver as opções referentes à fatura e cartões de crédito
-    Log    message
-
-E deve ser possível ver o histórico de transferências
-    Log    message
+E acesso a funcionalidade de empréstimo vista ao scrollar para baixo
+    Swipe para cima Y
+    Click Element    xpath=//android.view.View[contains(@content-desc,"Empréstimo\nValor disponível de até")]

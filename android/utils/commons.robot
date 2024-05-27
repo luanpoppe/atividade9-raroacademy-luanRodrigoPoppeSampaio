@@ -20,9 +20,9 @@ Get Element Content Desc
     RETURN    ${texto}
 
 Swipe para esquerda X
-    [Arguments]    ${valorXFinal}    ${valorY}=20    ${valorXInicial}=70
+    [Arguments]    ${valorXFinal}=20    ${valorY}=20    ${valorXInicial}=70
     Swipe By Percent    ${valorXInicial}    ${valorY}    ${valorXFinal}    ${valorY}
 
-Swipe Y
-    [Arguments]    ${valorYFinal}    ${valorX}=20    ${valorYInicial}=20
-    Swipe By Percent    ${valorYInicial}    ${valorX}    ${valorYFinal}    ${valorX}
+Swipe para cima Y
+    [Arguments]    ${valorYFinal}=20    ${valorX}=20    ${valorYInicial}=75
+    Swipe By Percent    ${valorX}    ${valorYInicial}    ${valorX}    ${valorYFinal}
