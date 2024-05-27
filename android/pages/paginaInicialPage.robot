@@ -5,6 +5,7 @@ Resource    ../base.robot
 ${boasVindas}    xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]
 ${infoSaldoConta}    xpath=//android.view.View[contains(@content-desc, 'Conta')]
 ${botaoAcessarIndicarAmigos}    xpath=//android.widget.ScrollView/android.widget.Button[3]
+${botaoOcultarValores}    xpath=//android.widget.ScrollView/android.widget.Button[1]
 ${botaoPix}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]
 ${botaoPagar}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
 ${botaoTransferir}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
@@ -155,3 +156,23 @@ E clico na funcionalidade de indicar amigos
     Wait Until Element Is Visible    ${informacoesIndiqueSeusAmigos}
     Swipe para esquerda X    10    85    90
     Click Element    xpath=//android.view.View[@content-desc="Indicar amigos"]
+
+Quando acesso a seção de Pix
+    Quando acesso a página inicial do Aplicativo
+    E acesso a funcionalidade do pix
+
+Então o usuário deve retornar à página inicial do aplicativo
+    Wait Until Page Contains Element    ${secaoBotoes}
+    Wait Until Page Contains Element    ${botaoMeusCartoes}
+    Wait Until Page Contains Element    ${mensagemDisponivelEmprestimo}
+
+E clico na funcionalidade de mostrar/ocultar valores da tela
+    Click Element    ${botaoOcultarValores}
+
+Então os valores da conta e do cartão de crédito devem ser ocultados
+    ${texto} =    Get Element Attribute    ${infoSaldoConta}    content-desc
+    Should Be Equal    ${texto}    Conta
+
+    ${texto} =    Get Element Attribute    ${mensagemFaturaAtual}    content-desc
+    Should Be Equal    ${texto}    Cartão de Crédito\nFatura atual
+

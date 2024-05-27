@@ -158,3 +158,18 @@ Usuário deve conseguir acessar a seção de indicar para amigos através da se�
     E scrollo para baixo até o final do app
     E clico na funcionalidade de indicar amigos
     Então devo ver as informações sobre a funcionalidade de indicação e amigos
+
+Usuário deve conseguir retornar de alguma seção para a página inicial ao clicar no X
+    Quando acesso a seção de Pix
+    E clico no botão X
+    Então o usuário deve retornar à página inicial do aplicativo
+
+Usuário deve conseguir retornar de alguma seção para a página inicial scrollar para baixo
+    Quando acesso a seção de Pix
+    E scrollo para baixo
+    Então o usuário deve retornar à página inicial do aplicativo
+
+Usuário deve conseguir omitir os valores pessoais de sua conta ao clicar na funcionalidade de mostrar/ocultar valores
+    Quando acesso a página inicial do Aplicativo
+    E clico na funcionalidade de mostrar/ocultar valores da tela
+    Então os valores da conta e do cartão de crédito devem ser ocultados

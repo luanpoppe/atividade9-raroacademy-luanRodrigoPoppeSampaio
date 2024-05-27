@@ -9,6 +9,7 @@ ${botaoCobrarPix}    ${telaPix}/android.widget.Button[4]
 ${botaoMinhasChaves}    xpath=//android.view.View[@content-desc="Minhas chaves"]
 ${botaoMeuLimitePix}    xpath=//android.view.View[@content-desc="Meu limite Pix"]
 ${botaoMeAjuda}    xpath=//android.view.View[@content-desc="Me ajuda"]
+${botaoVoltarPix}    xpath=//android.widget.ImageView[@content-desc="Minha área Pix\nTudo o que você precisa para pagar, transferir ou cobrar.\nPagar\nTransferir\nCobrar"]/android.widget.Button[1]
 
 *** Keywords ***
 
@@ -26,3 +27,11 @@ Então deve ser possível ver as informações sobre a funcionalidade de pix
     Page Should Contain Element    ${botaoMinhasChaves}
     Page Should Contain Element    ${botaoMeuLimitePix}
     Page Should Contain Element    ${botaoMeAjuda}
+
+E clico no botão X
+    Wait Until Page Contains Element    ${telaPix}
+    Click Element    ${botaoVoltarPix}
+
+E scrollo para baixo
+    Wait Until Page Contains Element    ${telaPix}
+    Swipe By Percent    50    20    50    80

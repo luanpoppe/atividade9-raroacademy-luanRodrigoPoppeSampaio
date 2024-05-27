@@ -12,6 +12,7 @@ Então usuário deve ver a instrução da cobrança
     Page Should Contain Element    ${telaCobranca}
     ${hint}=    Get Element Attribute    ${telaCobranca}    hint
     Should Contain    ${hint}    Qual valor você quer receber?\nNão especificar um valor >
+    Element Text Should Be    ${telaCobranca}    R$ 0,00
 
 E deve ser possível digitar qual o número será cobrado
     Input Text    ${telaCobranca}    5560
