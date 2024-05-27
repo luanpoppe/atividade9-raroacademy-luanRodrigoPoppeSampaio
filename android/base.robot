@@ -14,6 +14,7 @@ Resource    pages/transferirPage.robot
 Resource    pages/depositarPage.robot
 Resource    pages/emprestimoPage.robot
 Resource    pages/recargaCelularPage.robot
+Resource    pages/cobrarPage.robot
 
 # Features:
 # Resource    features/paginaInicial.robot

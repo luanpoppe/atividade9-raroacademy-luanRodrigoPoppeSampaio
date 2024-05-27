@@ -18,3 +18,11 @@ Get Element Content Desc
     [Arguments]    ${elemento}
     ${texto}=    Get Element Attribute    ${elemento}    content-desc
     RETURN    ${texto}
+
+Swipe para esquerda X
+    [Arguments]    ${valorXFinal}    ${valorY}=20    ${valorXInicial}=70
+    Swipe By Percent    ${valorXInicial}    ${valorY}    ${valorXFinal}    ${valorY}
+
+Swipe Y
+    [Arguments]    ${valorYFinal}    ${valorX}=20    ${valorYInicial}=20
+    Swipe By Percent    ${valorYInicial}    ${valorX}    ${valorYFinal}    ${valorX}

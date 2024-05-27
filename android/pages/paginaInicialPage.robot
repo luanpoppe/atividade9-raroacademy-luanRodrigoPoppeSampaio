@@ -19,6 +19,7 @@ ${botaoEncontrarAtalhos}    xpath=//android.widget.ScrollView/android.widget.Hor
 
 ${mensagemDisponivelEmprestimo}    xpath=//android.view.View[contains(@content-desc, "disponíveis para empréstimo.")]
 ${mensagemFaturaAtual}    xpath=//android.view.View[contains(@content-desc, "Fatura atual")]
+${mensagemPlanosFuturos}    xpath=//android.view.View[@content-desc="Conquiste planos futuros: conheça as opções para guardar dinheiro."]
 
 ${secaoBotoes}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]
 ${botaoMeusCartoes}    xpath=//android.view.View[@content-desc="Meus cartões"]
@@ -37,6 +38,13 @@ Clicar em Recarga de Celular
     Swipe dos botões iniciais
     Click Element    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
 
+Clicar em cobrar
+    Swipe dos botões iniciais
+    Click Element    ${botaoCobrar}
+
+E tento visualizar todos os botões do carrousel de botões
+    Swipe dos botões iniciais
+
 # BDD
 Quando acesso a página inicial do Aplicativo
     Wait Until Page Contains Element    ${secaoBotoes}
@@ -47,8 +55,6 @@ Quando acesso a página inicial do Aplicativo
 Então deve aparecer na tela algumas informações pessoais do usuário
     Page Should Contain Element    ${boasVindas}
     Page Should Contain Element    ${infoSaldoConta}
-    ${texto} =    Get Element Attribute    ${mensagemDisponivelEmprestimo}    content-desc
-    Should Contain    ${texto}    Você tem R$
     ${texto} =    Get Element Attribute    ${mensagemFaturaAtual}    content-desc
     Should Contain    ${texto}    Cartão de Crédito
     Should Contain    ${texto}    Limite disponível R$
@@ -74,9 +80,46 @@ E acesso a seção de empréstimos
 E acesso a seção de recarga de celular
     Clicar em Recarga de Celular
 
-E acesso a seção de "cobrar"
+E acesso a seção de cobranças
+    Clicar em cobrar
+
+Então deve ser possível ver a funcionalidade de doação
+    Wait Until Page Contains Element    ${botaoDoacao}
+    Page Should Contain Element    ${botaoDoacao}
+    Page Should Contain Text    Doação
+Então deve ser possível ver a funcionalidade de encontrar atalhos
+    Wait Until Page Contains Element    ${botaoEncontrarAtalhos}
+    Page Should Contain Element    ${botaoEncontrarAtalhos}
+    Page Should Contain Text    Encontrar atalhos
+
+Então deve ser possível visualizar a funcionalidade "Meus cartões"
+    Wait Until Page Contains Element    ${botaoMeusCartoes}
+    Page Should Contain Element    ${botaoMeusCartoes}
+
+
+Então deve ser possível visualizar a mensagem informando quanto ele tem disponível para empréstimo
+    ${texto} =    Get Element Attribute    ${mensagemDisponivelEmprestimo}    content-desc
+    Should Contain    ${texto}    Você tem R$
+
+E clico na mensagem informando o quanto o usuário tem disponível para empréstimo
+    Wait Until Element Is Visible    ${mensagemDisponivelEmprestimo}
+    Click Element    ${mensagemDisponivelEmprestimo}
+
+E procuro a mensagem de opções para guardar dinheiro
+    Swipe para esquerda X    25    67
+
+Então deve ser possível visualizar a mensagem em questão
+    Wait Until Element Is Visible    ${mensagemPlanosFuturos}
+    Page Should Contain Element    ${mensagemPlanosFuturos}
+
+E acesso a funcionalidade que mostra as informações sobre cartão de crédito
+    Click Element    ${mensagemFaturaAtual}
+
+Então deve ser possível ver informações sobre a fatura atual
     Log    message
-E acesso a seção de doação
+
+E deve ser possível ver as opções referentes à fatura e cartões de crédito
     Log    message
-E acesso a seção de encontrar atalhos
+
+E deve ser possível ver o histórico de transferências
     Log    message

@@ -75,8 +75,55 @@ Na seção de recarregar celular não deve ser possível digitar mais do que 11 
     E usuário tenta digitar um número de telefone com mais de 11 números
     Então o número considerado só irá conter os primeiros 11 valores digitados
 
-Usuário deve conseguir acessar a seção de recarga de celular
+Usuário deve conseguir acessar a seção de oobranças
     Quando acesso a página inicial do Aplicativo
-    E acesso a seção de recarga de celular
-    Então usuário deve ver a instrução da recarga
-    E deve ser possível digitar qual o número será carregado
+    E acesso a seção de cobranças
+    Então usuário deve ver a instrução da cobrança
+    E deve ser possível digitar qual o número será cobrado
+
+Na seção de cobranças não deve ser possível digitar um valor contendo letras 
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de cobranças
+    E usuário tenta digitar um valor de cobrança contendo letras
+    Então as letras digitadas não devem ser consideradas para a cobrança
+
+Na seção cobranças não deve ser possível digitar mais do que 14 números
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de cobranças
+    E usuário tenta digitar um valor de cobrança com mais de 11 números
+    Então o número considerado só irá conter os primeiros 14 valores digitados
+
+Usuário deve poder ver na página inicial a funcionalidade que o leva à seção de doação
+    Quando acesso a página inicial do Aplicativo
+    E tento visualizar todos os botões do carrousel de botões
+    Então deve ser possível ver a funcionalidade de doação
+
+Usuário deve poder ver na página inicial a funcionalidade que o leva à seção de encontrar atalhos
+    Quando acesso a página inicial do Aplicativo
+    E tento visualizar todos os botões do carrousel de botões
+    Então deve ser possível ver a funcionalidade de encontrar atalhos
+
+Usuário deve ver ao entrar no aplicativo a opção de acessar a seção "Meus cartões"
+    Quando acesso a página inicial do Aplicativo
+    Então deve ser possível visualizar a funcionalidade "Meus cartões"
+
+Usuário deve ver ao entrar no aplicativo a opção informando quando ele temd isponível para empréstimo 
+    Quando acesso a página inicial do Aplicativo
+    Então deve ser possível visualizar a mensagem informando quanto ele tem disponível para empréstimo
+
+Ao clicar na mensagem que informa o máximo de empréstimo que pode realizar, usuário deve ser levado à tela de empréstimo
+    Quando acesso a página inicial do Aplicativo
+    E clico na mensagem informando o quanto o usuário tem disponível para empréstimo
+    Então deve ser possível ver as informações sobre empréstimo
+
+Usuário deve conseguir ver a mensagem de opções para guardar dinheiro na página inicial
+    Quando acesso a página inicial do Aplicativo
+    E procuro a mensagem de opções para guardar dinheiro
+    Então deve ser possível visualizar a mensagem em questão
+
+Usuário deve conseguir acessar a seção de cartão de crédito de sua conta
+    Quando acesso a página inicial do Aplicativo
+    E acesso a funcionalidade que mostra as informações sobre cartão de crédito
+    Então deve ser possível ver informações sobre a fatura atual
+    E deve ser possível ver as opções referentes à fatura e cartões de crédito
+    E deve ser possível ver o histórico de transferências

@@ -5,7 +5,7 @@ Resource    ../base.robot
 ${telaPix}        xpath=//android.widget.ImageView[contains(@content-desc,"Minha área Pix")]
 ${botaoPagarPix}    ${telaPix}/android.widget.Button[2]
 ${botaoTransferirPix}    ${telaPix}/android.widget.Button[3]
-${botaoCobrar}    ${telaPix}/android.widget.Button[4]
+${botaoCobrarPix}    ${telaPix}/android.widget.Button[4]
 ${botaoMinhasChaves}    xpath=//android.view.View[@content-desc="Minhas chaves"]
 ${botaoMeuLimitePix}    xpath=//android.view.View[@content-desc="Meu limite Pix"]
 ${botaoMeAjuda}    xpath=//android.view.View[@content-desc="Me ajuda"]
@@ -22,7 +22,7 @@ Então deve ser possível ver as informações sobre a funcionalidade de pix
     Should Contain    ${texto}    Cobrar
     Page Should Contain Element    ${botaoPagarPix}
     Page Should Contain Element    ${botaoTransferirPix}
-    Page Should Contain Element    ${botaoCobrar}
+    Page Should Contain Element    ${botaoCobrarPix}
     Page Should Contain Element    ${botaoMinhasChaves}
     Page Should Contain Element    ${botaoMeuLimitePix}
     Page Should Contain Element    ${botaoMeAjuda}
