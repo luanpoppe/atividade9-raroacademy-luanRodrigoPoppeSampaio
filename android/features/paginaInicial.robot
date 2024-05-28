@@ -161,12 +161,23 @@ Usuário deve conseguir acessar a seção de indicar para amigos através da se�
 
 Usuário deve conseguir retornar de alguma seção para a página inicial ao clicar no X
     Quando acesso a seção de Pix
-    E clico no botão X
+    E clico no botão X    ${botaoVoltarPix}
+    Então o usuário deve retornar à página inicial do aplicativo
+
+Usuário deve conseguir retornar da seção de pagamentos para a página inicial ao clicar no X
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de pagar
+    E clico no botão X    ${botaoVoltarPagamentos}
     Então o usuário deve retornar à página inicial do aplicativo
 
 Usuário deve conseguir retornar de alguma seção para a página inicial scrollar para baixo
     Quando acesso a seção de Pix
-    E scrollo para baixo
+    E scrollo para baixo    ${telaPix}
+    Então o usuário deve retornar à página inicial do aplicativo
+Usuário deve conseguir retornar da seção de pagamentos para a página inicial scrollar para baixo
+    Quando acesso a página inicial do Aplicativo
+    E acesso a seção de pagar
+    E scrollo para baixo    ${telaPagar}
     Então o usuário deve retornar à página inicial do aplicativo
 
 Usuário deve conseguir omitir os valores pessoais de sua conta ao clicar na funcionalidade de mostrar/ocultar valores

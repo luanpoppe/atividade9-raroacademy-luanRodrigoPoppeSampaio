@@ -6,6 +6,7 @@ ${telaPagar}        xpath=//android.widget.FrameLayout[@resource-id="android:id/
 ${botaoPagarComPix}    xpath=//android.view.View[@content-desc="Pagar com Pix\nLeia um QR Code ou cole o código."]
 ${botaoPagarFaturaCartao}    xpath=//android.view.View[@content-desc="Pagar fatura do cartão\nLibera o limite do seu Cartão de Crédito."]
 ${botaoPagarBoleto}    xpath=//android.view.View[@content-desc="Pagar um boleto\nContas de luz, água, etc."]
+${botaoVoltarPagamentos}    xpath=//android.widget.Button
 
 *** Keywords ***
 

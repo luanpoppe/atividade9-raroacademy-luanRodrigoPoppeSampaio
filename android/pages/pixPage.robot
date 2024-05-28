@@ -17,11 +17,3 @@ ${botaoVoltarPix}    xpath=//android.widget.ImageView[@content-desc="Minha área
 Então deve ser possível ver as informações sobre a funcionalidade de pix
     Wait Until Page Contains Element    ${telaPix}
     Checar se elementos estão habilitados e visíveis    ${botaoPagarPix}    ${botaoTransferirPix}    ${botaoCobrarPix}    ${botaoMinhasChaves}    ${botaoMeuLimitePix}    ${botaoMeAjuda}
-
-E clico no botão X
-    Wait Until Page Contains Element    ${telaPix}
-    Click Element    ${botaoVoltarPix}
-
-E scrollo para baixo
-    Wait Until Page Contains Element    ${telaPix}
-    Swipe By Percent    50    20    50    80

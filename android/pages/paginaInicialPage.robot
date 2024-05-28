@@ -61,6 +61,16 @@ Acessar a seção de seguro de vida
     Swipe para cima Y
     Click Element    xpath=//android.view.View[@content-desc="Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso."]
 
+E clico no botão X
+    [Arguments]    ${elemento}
+    Wait Until Page Contains Element    ${elemento}
+    Click Element    ${elemento}
+
+E scrollo para baixo
+    [Arguments]    ${elementoAguardado}
+    Wait Until Page Contains Element    ${elementoAguardado}
+    Swipe By Percent    50    20    50    80
+
 # BDD
 Quando acesso a página inicial do Aplicativo
     Wait Until Page Contains Element    ${secaoBotoes}
@@ -173,6 +183,7 @@ Então o usuário deve retornar à página inicial do aplicativo
     Wait Until Page Contains Element    ${mensagemDisponivelEmprestimo}
 
 E clico na funcionalidade de mostrar/ocultar valores da tela
+    Wait Until Page Contains Element    ${botaoOcultarValores}
     Click Element    ${botaoOcultarValores}
 
 Então os valores da conta e do cartão de crédito devem ser ocultados

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-27T23:25:21.394019" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-27T23:37:41.056413" rpa="false" schemaversion="5">
 <suite id="s1" name="paginaInicial" source="c:\Programação\Tests\Curso Raro\Exercício 09\android\features\paginaInicial.robot">
-<test id="s1-t1" name="Usuário deve conseguir retornar de alguma seção para a página inicial ao clicar no X" line="162">
+<test id="s1-t1" name="Usuário deve conseguir omitir os valores pessoais de sua conta ao clicar na funcionalidade de mostrar/ocultar valores" line="183">
 <kw name="Abrir App" owner="config" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://127.0.0.1:4723</arg>
@@ -17,129 +17,109 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-05-27T23:25:21.653019" elapsed="11.303329"/>
+<status status="PASS" start="2024-05-27T23:37:41.434939" elapsed="11.308610"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:25:21.652021" elapsed="11.304327"/>
+<status status="PASS" start="2024-05-27T23:37:41.432938" elapsed="11.311613"/>
 </kw>
-<kw name="Quando acesso a seção de Pix" owner="paginaInicialPage">
 <kw name="Quando acesso a página inicial do Aplicativo" owner="paginaInicialPage">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:33.706400" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]</msg>
+<msg time="2024-05-27T23:37:53.516158" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]</msg>
 <arg>${secaoBotoes}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:32.958348" elapsed="0.749051"/>
+<status status="PASS" start="2024-05-27T23:37:52.747551" elapsed="0.770607"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:33.767399" level="INFO">xpath criteria: //android.view.View[@content-desc="Meus cartões"]</msg>
+<msg time="2024-05-27T23:37:53.583159" level="INFO">xpath criteria: //android.view.View[@content-desc="Meus cartões"]</msg>
 <arg>${botaoMeusCartoes}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:33.708402" elapsed="0.058997"/>
+<status status="PASS" start="2024-05-27T23:37:53.518158" elapsed="0.065001"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:33.818398" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "disponíveis para empréstimo.")]</msg>
+<msg time="2024-05-27T23:37:53.635158" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "disponíveis para empréstimo.")]</msg>
 <arg>${mensagemDisponivelEmprestimo}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:33.767399" elapsed="0.052000"/>
+<status status="PASS" start="2024-05-27T23:37:53.583159" elapsed="0.053000"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:33.867400" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View</msg>
+<msg time="2024-05-27T23:37:53.682159" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View</msg>
 <arg>${telaInicial}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:33.819399" elapsed="0.048001"/>
+<status status="PASS" start="2024-05-27T23:37:53.636159" elapsed="0.046000"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:25:32.958348" elapsed="0.909052"/>
+<status status="PASS" start="2024-05-27T23:37:52.747551" elapsed="0.934608"/>
 </kw>
-<kw name="E acesso a funcionalidade do pix" owner="paginaInicialPage">
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:33.870399" level="INFO">Clicking element 'xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]'.</msg>
-<msg time="2024-05-27T23:25:33.999399" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]</msg>
-<arg>${botaoPix}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-05-27T23:25:33.867400" elapsed="0.131999"/>
-</kw>
-<status status="PASS" start="2024-05-27T23:25:33.867400" elapsed="0.133000"/>
-</kw>
-<status status="PASS" start="2024-05-27T23:25:32.957351" elapsed="1.043049"/>
-</kw>
-<kw name="E clico no botão X" owner="pixPage">
+<kw name="E clico na funcionalidade de mostrar/ocultar valores da tela" owner="paginaInicialPage">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:35.581570" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="Minha área Pix
-Tudo o que você precisa para pagar, transferir ou cobrar.
-Pagar
-Transferir
-Cobrar"]
-xpath criteria: //android.widget.ImageView[@content-desc="Minha área Pix
-Tudo o que você precisa para pagar, transferir ou cobrar.
-Pagar
-Transferir
-Cobrar"]
-xpath criteria: //android.widget.ImageView[@content-desc="Minha área Pix
-Tudo o que você precisa para pagar, transferir ou cobrar.
-Pagar
-Transferir
-Cobrar"]
-xpath criteria: //android.widget.ImageView[@content-desc="Minha área Pix
-Tudo o que você precisa para pagar, transferir ou cobrar.
-Pagar
-Transferir
-Cobrar"]</msg>
-<arg>${telaPix}</arg>
+<msg time="2024-05-27T23:37:53.731159" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.Button[1]</msg>
+<arg>${botaoOcultarValores}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:34.001399" elapsed="1.581170"/>
+<status status="PASS" start="2024-05-27T23:37:53.683158" elapsed="0.048001"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:35.585569" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="Minha área Pix
-Tudo o que você precisa para pagar, transferir ou cobrar.
-Pagar
-Transferir
-Cobrar"]/android.widget.Button[1]'.</msg>
-<msg time="2024-05-27T23:25:36.711567" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="Minha área Pix
-Tudo o que você precisa para pagar, transferir ou cobrar.
-Pagar
-Transferir
-Cobrar"]/android.widget.Button[1]</msg>
-<arg>${botaoVoltarPix}</arg>
+<msg time="2024-05-27T23:37:53.734158" level="INFO">Clicking element 'xpath=//android.widget.ScrollView/android.widget.Button[1]'.</msg>
+<msg time="2024-05-27T23:37:53.868159" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.Button[1]</msg>
+<arg>${botaoOcultarValores}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-05-27T23:25:35.582569" elapsed="1.128998"/>
+<status status="PASS" start="2024-05-27T23:37:53.731159" elapsed="0.137000"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:25:34.000400" elapsed="2.711167"/>
+<status status="PASS" start="2024-05-27T23:37:53.683158" elapsed="0.186000"/>
 </kw>
-<kw name="Então o usuário deve retornar à página inicial do aplicativo" owner="paginaInicialPage">
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:36.756568" level="INFO">xpath criteria: //android.widget.ScrollView/android.widget.HorizontalScrollView[1]</msg>
-<arg>${secaoBotoes}</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:36.712569" elapsed="0.044999"/>
+<kw name="Então os valores da conta e do cartão de crédito devem ser ocultados" owner="paginaInicialPage">
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-27T23:37:53.870159" level="WARN">Keyword 'Get Element Attribute' found both from a custom library 'AppiumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'AppiumLibrary.Get Element Attribute' or 'XML.Get Element Attribute'.</msg>
+<msg time="2024-05-27T23:37:54.781696" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc, 'Conta')]' attribute 'content-desc' value 'Conta' </msg>
+<msg time="2024-05-27T23:37:54.781696" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, 'Conta')]</msg>
+<msg time="2024-05-27T23:37:54.782694" level="INFO">${texto} = Conta</msg>
+<var>${texto}</var>
+<arg>${infoSaldoConta}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-27T23:37:53.870159" elapsed="0.912535"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:36.796568" level="INFO">xpath criteria: //android.view.View[@content-desc="Meus cartões"]</msg>
-<arg>${botaoMeusCartoes}</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:36.757568" elapsed="0.040002"/>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Conta</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-27T23:37:54.782694" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-05-27T23:25:36.834567" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "disponíveis para empréstimo.")]</msg>
-<arg>${mensagemDisponivelEmprestimo}</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-05-27T23:25:36.797570" elapsed="0.037998"/>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-27T23:37:54.782694" level="WARN">Keyword 'Get Element Attribute' found both from a custom library 'AppiumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'AppiumLibrary.Get Element Attribute' or 'XML.Get Element Attribute'.</msg>
+<msg time="2024-05-27T23:37:54.871693" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc, "Cartão de Crédito
+Fatura atual")]' attribute 'content-desc' value 'Cartão de Crédito
+Fatura atual' </msg>
+<msg time="2024-05-27T23:37:54.871693" level="INFO">xpath criteria: //android.view.View[contains(@content-desc, "Cartão de Crédito
+Fatura atual")]</msg>
+<msg time="2024-05-27T23:37:54.871693" level="INFO">${texto} = Cartão de Crédito
+Fatura atual</msg>
+<var>${texto}</var>
+<arg>${mensagemFaturaAtual}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-27T23:37:54.782694" elapsed="0.088999"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:25:36.712569" elapsed="0.122999"/>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Cartão de Crédito\nFatura atual</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-05-27T23:37:54.872694" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-27T23:37:53.869158" elapsed="1.003536"/>
 </kw>
 <kw name="Teardown" owner="config" type="TEARDOWN">
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2024-05-27T23:25:36.836568" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-27T23:37:54.874694" elapsed="0.000000"/>
 </kw>
 <kw name="Close All Applications" owner="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" start="2024-05-27T23:25:36.836568" elapsed="0.555551"/>
+<status status="PASS" start="2024-05-27T23:37:54.874694" elapsed="0.673002"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:25:36.835568" elapsed="0.556551"/>
+<status status="PASS" start="2024-05-27T23:37:54.873696" elapsed="0.674000"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:25:21.651018" elapsed="15.742101"/>
+<status status="PASS" start="2024-05-27T23:37:41.431938" elapsed="14.120756"/>
 </test>
-<status status="PASS" start="2024-05-27T23:25:21.399022" elapsed="15.998098"/>
+<status status="PASS" start="2024-05-27T23:37:41.065412" elapsed="14.494282"/>
 </suite>
 <statistics>
 <total>
@@ -152,5 +132,7 @@ Cobrar"]/android.widget.Button[1]</msg>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-05-27T23:37:53.870159" level="WARN">Keyword 'Get Element Attribute' found both from a custom library 'AppiumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'AppiumLibrary.Get Element Attribute' or 'XML.Get Element Attribute'.</msg>
+<msg time="2024-05-27T23:37:54.782694" level="WARN">Keyword 'Get Element Attribute' found both from a custom library 'AppiumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'AppiumLibrary.Get Element Attribute' or 'XML.Get Element Attribute'.</msg>
 </errors>
 </robot>
