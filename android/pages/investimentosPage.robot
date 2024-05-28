@@ -16,8 +16,5 @@ Aguardar tela de investimentos carregar
 
 Então deve ser possível ver as informações sobre investimentos
     Wait Until Page Contains Element    ${telaInvestimentos}
-    Element Should Be Visible    ${imagemTituloInvestimentos}
-    Element Should Be Visible    ${tituloInvestimentos}
-    Element Should Be Visible    ${descricaoInvestimentos1}
-    Element Should Be Visible    ${descricaoInvestimentos2}
-    Element Should Be Visible    ${botaoAvançarInvestimentos}
+    Wait Until Page Contains Element    ${imagemTituloInvestimentos}
+    Checar se elementos estão visíveis    ${imagemTituloInvestimentos}    ${tituloInvestimentos}    ${descricaoInvestimentos1}    ${descricaoInvestimentos2}    ${botaoAvançarInvestimentos}

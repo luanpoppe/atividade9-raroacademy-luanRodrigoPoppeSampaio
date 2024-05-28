@@ -75,7 +75,7 @@ Na seção de recarregar celular não deve ser possível digitar mais do que 11 
     E usuário tenta digitar um número de telefone com mais de 11 números
     Então o número considerado só irá conter os primeiros 11 valores digitados
 
-Usuário deve conseguir acessar a seção de oobranças
+Usuário deve conseguir acessar a seção de cobranças
     Quando acesso a página inicial do Aplicativo
     E acesso a seção de cobranças
     Então usuário deve ver a instrução da cobrança
@@ -107,7 +107,7 @@ Usuário deve ver ao entrar no aplicativo a opção de acessar a seção "Meus c
     Quando acesso a página inicial do Aplicativo
     Então deve ser possível visualizar a funcionalidade "Meus cartões"
 
-Usuário deve ver ao entrar no aplicativo a opção informando quando ele temd isponível para empréstimo 
+Usuário deve ver ao entrar no aplicativo a opção informando quanto ele tem disponível para empréstimo 
     Quando acesso a página inicial do Aplicativo
     Então deve ser possível visualizar a mensagem informando quanto ele tem disponível para empréstimo
 
@@ -151,7 +151,7 @@ Usuário deve poder ver a funcionalidade de acessar a seção de seguro de vida
 Usuário deve ver seção de descobrir mais funcionalidades ao fim do aplicativo
     Quando acesso a página inicial do Aplicativo
     E scrollo para baixo até o final do app
-    Então deve ser possível visualizar as seções
+    Então deve ser possível visualizar a seção de descobrir mais funcionalidades
 
 Usuário deve conseguir acessar a seção de indicar para amigos através da seção de descubra mais ao scrollar o app para todo para baixo
     Quando acesso a página inicial do Aplicativo

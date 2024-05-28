@@ -10,8 +10,7 @@ ${telaRecargaCelular}    xpath=//android.widget.EditText
 
 Então usuário deve ver a instrução da recarga
     Wait Until Page Contains Element    ${telaRecargaCelular}
-    ${hint}=    Get Element Attribute    ${telaRecargaCelular}    hint
-    Should Contain    ${hint}    Qual número você quer recarregar?\n(DDD) + Número
+    O atributo do elemento deve conter texto    ${telaRecargaCelular}    hint    Qual número você quer recarregar?\n(DDD) + Número
     Element Text Should Be    ${telaRecargaCelular}    ${EMPTY}
 
 E deve ser possível digitar qual o número será carregado

@@ -18,16 +18,11 @@ ${mensagemNaoHaEmprestimos}    xpath=//android.view.View[@content-desc="Você n�
 Então deve ser possível ver as informações sobre empréstimo
     Wait Until Page Contains Element    ${telaEmprestimo}
     Wait Until Page Contains Element    ${botaoVoltarEmprestimo}
-    Element Should Be Visible    ${botaoVoltarEmprestimo}
-    Element Should Be Visible    ${botaoAjudaEmprestimo}
-    Element Should Be Visible    ${tituloEmprestimo}
-    Element Should Be Visible    ${descricaoEmprestimo}
-    Element Should Be Visible    ${botaoEntendaComoFunciona}
-    Element Should Be Visible    ${botaoNovoEmprestimo}
-
+    Checar se elementos estão habilitados e visíveis    ${botaoVoltarEmprestimo}    ${botaoAjudaEmprestimo}    ${tituloEmprestimo}    ${descricaoEmprestimo}    ${botaoEntendaComoFunciona}
+    Checar se elementos estão visíveis    ${botaoNovoEmprestimo}
 Então deve ser possível ver a mensagem informando que o usuário não possui empréstimos
     Wait Until Page Contains Element    ${mensagemNaoHaEmprestimos}
-    Element Should Be Visible    ${mensagemNaoHaEmprestimos}
+    Checar se elementos estão visíveis    ${mensagemNaoHaEmprestimos}
 
 
 

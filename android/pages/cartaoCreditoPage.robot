@@ -22,39 +22,30 @@ ${botaoIndicarAmigosCartaoCredito}    xpath=//android.view.View[@content-desc="I
 Aguarda a página de cobrança carregar
     Wait Until Page Contains Element    ${telaCartaoCredito}
     Wait Until Page Contains Element    ${tituloCartaoCredito}
-    # Wait Until Element Is Visible    ${telaCartaoCredito}
 
 Swipe opcoes cartao de credito
     Swipe para esquerda X    20    80
 
 Então deve ser possível ver informações sobre a fatura atual
     Aguarda a página de cobrança carregar
-    # Element Should Be Visible    ${telaCartaoCredito}
-    Element Should Be Visible    ${tituloCartaoCredito}
-    Element Should Be Visible    ${limiteDisponivel}
+    Page Should Contain Element    ${telaCartaoCredito}
+    Checar se elementos estão visíveis    ${tituloCartaoCredito}    ${limiteDisponivel}
 
 E deve ser possível ver as opções referentes à fatura e cartões de crédito
     Aguarda a página de cobrança carregar
-    Element Should Be Visible    ${botaoPagarFaturaCartaoCredito}
-    Element Should Be Visible    ${botaoResumoFaturasCartaoCredito}
-    Element Should Be Visible    ${botaoAjustarLimitesCartaoCredito}
-    Element Should Be Visible    ${botaoCartaoVirtualCartaoCredito}
+    Checar se elementos estão habilitados e visíveis    ${botaoPagarFaturaCartaoCredito}    ${botaoResumoFaturasCartaoCredito}    ${botaoAjustarLimitesCartaoCredito}    ${botaoCartaoVirtualCartaoCredito}
+
     Swipe opcoes cartao de credito
-    Element Should Be Visible    ${botaoBloquearCartaoCredito}
-    Element Should Be Visible    ${botaoIndicarAmigosCartaoCredito}
+    Checar se elementos estão habilitados e visíveis    ${botaoBloquearCartaoCredito}    ${botaoIndicarAmigosCartaoCredito}
 
 
 E deve ser possível ver o histórico de transferências
     Aguarda a página de cobrança carregar
-    # Swipe By Percent    50    80    50    20
     Swipe para cima Y    30    50    80
-    Sleep    3
-    ${historico1} =    Get Element Attribute    xpath=//android.widget.ScrollView/*[2]    content-desc
-    ${historico2} =    Get Element Attribute    xpath=//android.widget.ScrollView/*[3]    content-desc
-    ${historico3} =    Get Element Attribute    xpath=//android.widget.ScrollView/*[4]    content-desc
-    Should Contain    ${historico1}    Pagamento recebido\nOntem
-    Should Contain    ${historico1}    Pix
-    Should Contain    ${historico2}    Supermercado\nOntem
-    Should Contain    ${historico2}    Pix
-    Should Contain    ${historico3}    Transferência enviada\nOntem
-    Should Contain    ${historico3}    Pix
+
+    O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[2]    content-desc    Pagamento recebido\nOntem
+    O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[2]    content-desc    Pix
+    O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[3]    content-desc    Supermercado\nOntem
+    O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[3]    content-desc    Pix
+    O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[4]    content-desc    Transferência enviada\nOntem
+    O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[4]    content-desc    Pix

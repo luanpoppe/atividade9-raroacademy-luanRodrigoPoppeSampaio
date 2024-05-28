@@ -2,6 +2,7 @@
 Library    AppiumLibrary
 Resource    ../base.robot
 *** Variables ***
+${telaInicial}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View
 ${boasVindas}    xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]
 ${infoSaldoConta}    xpath=//android.view.View[contains(@content-desc, 'Conta')]
 ${botaoAcessarIndicarAmigos}    xpath=//android.widget.ScrollView/android.widget.Button[3]
@@ -19,7 +20,7 @@ ${botaoDoacao}    xpath=//android.widget.ScrollView/android.widget.HorizontalScr
 ${botaoEncontrarAtalhos}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
 
 ${mensagemDisponivelEmprestimo}    xpath=//android.view.View[contains(@content-desc, "disponíveis para empréstimo.")]
-${mensagemFaturaAtual}    xpath=//android.view.View[contains(@content-desc, "Fatura atual")]
+${mensagemFaturaAtual}    xpath=//android.view.View[contains(@content-desc, "Cartão de Crédito\nFatura atual")]
 ${mensagemPlanosFuturos}    xpath=//android.view.View[@content-desc="Conquiste planos futuros: conheça as opções para guardar dinheiro."]
 
 ${secaoBotoes}    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]
@@ -35,8 +36,8 @@ ${informacoesIndiqueSeusAmigos}    xpath=//android.view.View[@content-desc="Indi
 *** Keywords ***
 
 Swipe dos botões iniciais
-    Swipe By Percent    75    40    0    40
-    Swipe By Percent    75    40    0    40
+    Swipe By Percent    75    40    10    40
+    Swipe By Percent    75    40    10    40
     Wait Until Page Contains    Encontrar atalhos
 
 Clicar em Recarga de Celular
@@ -52,7 +53,9 @@ E tento visualizar todos os botões do carrousel de botões
 
 Acessar a seção de investimentos
     Swipe para cima Y
-    Click Element    xpath=//android.view.View[@content-desc="Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital."]
+    Set Test Variable    ${botaoInvestimentos}    xpath=//android.view.View[@content-desc="Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital."]
+    Wait Until Element Is Visible    ${botaoInvestimentos}
+    Click Element    ${botaoInvestimentos}
 
 Acessar a seção de seguro de vida
     Swipe para cima Y
@@ -63,14 +66,13 @@ Quando acesso a página inicial do Aplicativo
     Wait Until Page Contains Element    ${secaoBotoes}
     Wait Until Page Contains Element    ${botaoMeusCartoes}
     Wait Until Page Contains Element    ${mensagemDisponivelEmprestimo}
+    Wait Until Page Contains Element    ${telaInicial}
 
 
 Então deve aparecer na tela algumas informações pessoais do usuário
-    Page Should Contain Element    ${boasVindas}
-    Page Should Contain Element    ${infoSaldoConta}
-    ${texto} =    Get Element Attribute    ${mensagemFaturaAtual}    content-desc
-    Should Contain    ${texto}    Cartão de Crédito
-    Should Contain    ${texto}    Limite disponível R$
+    Checar se elementos estão visíveis    ${boasVindas}    ${infoSaldoConta}
+
+    O atributo do elemento deve conter texto    ${mensagemFaturaAtual}    content-desc    Limite disponível R$
 
 E clico no botão de indicar amigos
     Click Element    ${botaoAcessarIndicarAmigos}
@@ -98,21 +100,21 @@ E acesso a seção de cobranças
 
 Então deve ser possível ver a funcionalidade de doação
     Wait Until Page Contains Element    ${botaoDoacao}
-    Page Should Contain Element    ${botaoDoacao}
+    Checar se elementos estão habilitados e visíveis    ${botaoDoacao}
     Page Should Contain Text    Doação
 Então deve ser possível ver a funcionalidade de encontrar atalhos
     Wait Until Page Contains Element    ${botaoEncontrarAtalhos}
-    Page Should Contain Element    ${botaoEncontrarAtalhos}
+    Checar se elementos estão habilitados e visíveis    ${botaoEncontrarAtalhos}
     Page Should Contain Text    Encontrar atalhos
 
 Então deve ser possível visualizar a funcionalidade "Meus cartões"
     Wait Until Page Contains Element    ${botaoMeusCartoes}
-    Page Should Contain Element    ${botaoMeusCartoes}
+    Checar se elementos estão habilitados e visíveis    ${botaoMeusCartoes}
 
 
 Então deve ser possível visualizar a mensagem informando quanto ele tem disponível para empréstimo
-    ${texto} =    Get Element Attribute    ${mensagemDisponivelEmprestimo}    content-desc
-    Should Contain    ${texto}    Você tem R$
+    Checar se elementos estão habilitados e visíveis    ${mensagemDisponivelEmprestimo}
+    O atributo do elemento deve conter texto    ${mensagemDisponivelEmprestimo}    content-desc    Você tem R$
 
 E clico na mensagem informando o quanto o usuário tem disponível para empréstimo
     Wait Until Element Is Visible    ${mensagemDisponivelEmprestimo}
@@ -137,18 +139,22 @@ E acesso a funcionalidade de investimentos ao scrollar para baixo
 
 E acesso a funcionalidade de investimentos clicando no botão de conhecer investimentos ao scrollar para baixo
     Swipe para cima Y
-    Click Element    xpath=//android.view.View[@content-desc="Conhecer"]
+    Set Local Variable    ${conhecerInvestimentos}    xpath=//android.view.View[@content-desc="Conhecer"]
+    Wait Until Page Contains Element    ${conhecerInvestimentos}
+    Click Element    ${conhecerInvestimentos}
 
 E scrollo para baixo até o final do app
     Swipe para cima Y
     Swipe para cima Y
 
 Então consigo ver a funcionalidade de seguro de vida
-    Element Should Be Visible    xpath=//android.view.View[@content-desc="Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso."]
+    Set Local Variable    ${seguroDeVida}    xpath=//android.view.View[@content-desc="Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso."]
+    Wait Until Page Contains Element    ${seguroDeVida}
+    Element Should Be Visible    ${seguroDeVida}
 
-Então deve ser possível visualizar as seções
-    Element Should Be Visible    ${tituloDescubraMais}
-    Element Should Be Visible    ${informacoesWhatsapp}
+Então deve ser possível visualizar a seção de descobrir mais funcionalidades
+    Wait Until Page Contains Element    ${tituloDescubraMais}
+    Checar se elementos estão visíveis    ${tituloDescubraMais}    ${informacoesWhatsapp}
     Swipe para esquerda X    10    85    90
     Element Should Be Visible    ${informacoesIndiqueSeusAmigos}
 

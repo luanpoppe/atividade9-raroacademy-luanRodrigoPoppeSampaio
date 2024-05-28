@@ -12,6 +12,4 @@ ${botaoPagarBoleto}    xpath=//android.view.View[@content-desc="Pagar um boleto\
 Então deve ser possível ver as informações sobre a seção de pagar
     Wait Until Page Contains Element    ${telaPagar}
     Page Should Contain Element    ${telaPagar}
-    Page Should Contain Element    ${botaoPagarComPix}
-    Page Should Contain Element    ${botaoPagarFaturaCartao}
-    Page Should Contain Element    ${botaoPagarBoleto}
+    Checar se elementos estão habilitados e visíveis    ${botaoPagarComPix}    ${botaoPagarFaturaCartao}    ${botaoPagarBoleto}
