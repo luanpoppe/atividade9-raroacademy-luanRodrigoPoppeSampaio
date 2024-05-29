@@ -28,17 +28,6 @@ ${buttonAjudaConta}    xpath=//android.widget.FrameLayout[@resource-id="android:
 ${buttonVoltarConta}    xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button[1]
 
 *** Keywords ***
-E clicar na funcionalidade de conta
-    Aguardar para clicar no elemento    ${botaoConta}
-
-Então usuário deve poder acessar informações sobre sua conta
-    Wait Until Page Contains Element    ${telaConta}
-    Wait Until Page Contains Element    ${textoSaldoDisponivel}
-    Checar se elementos estão visíveis    ${textoSaldoDisponivel}    ${valorSaldoDisponivel}    ${labelDepositar}    ${labelPagar}    ${labelTransferir}    ${labelEmprestimos}    ${labelCobrar}    ${tituloHistorico}    ${buttonAjudaConta}    ${historico1}
-    Checar se elementos estão habilitados e visíveis    ${buttonDinheiroGuardado}    ${buttonRendimentoTotalConta}    ${buttonContaDepositar}    ${buttonContaPagar}    ${buttonContaTransferir}    ${buttonContaEmprestimos}    ${buttonContaCobrar}    ${buttonVoltarConta}
-    Swipe para cima Y
-    Checar se elementos estão visíveis    ${historico2}    ${historico3}    ${historico4}
-
 Quando clicar na funcionalidade para acessar a seção de depósitos
     Wait Until Keyword Succeeds    4    1    Aguardar para clicar no elemento    ${buttonContaDepositar}
 
@@ -50,6 +39,16 @@ Quando clicar na funcionalidade para acessar a seção de empréstimos
     Wait Until Keyword Succeeds    4    1    Aguardar para clicar no elemento    ${buttonContaEmprestimos}
 Quando clicar na funcionalidade para acessar a seção de cobranças
     Wait Until Keyword Succeeds    4    1    Aguardar para clicar no elemento    ${buttonContaCobrar}
-
 Quando clicar na opção de retornar da seção de conta
     Aguardar para clicar no elemento    ${buttonVoltarConta}
+
+E clicar na funcionalidade de conta
+    Aguardar para clicar no elemento    ${botaoConta}
+
+Então usuário deve poder acessar informações sobre sua conta
+    Wait Until Page Contains Element    ${telaConta}
+    Wait Until Page Contains Element    ${textoSaldoDisponivel}
+    Checar se elementos estão visíveis    ${textoSaldoDisponivel}    ${valorSaldoDisponivel}    ${labelDepositar}    ${labelPagar}    ${labelTransferir}    ${labelEmprestimos}    ${labelCobrar}    ${tituloHistorico}    ${buttonAjudaConta}    ${historico1}
+    Checar se elementos estão habilitados e visíveis    ${buttonDinheiroGuardado}    ${buttonRendimentoTotalConta}    ${buttonContaDepositar}    ${buttonContaPagar}    ${buttonContaTransferir}    ${buttonContaEmprestimos}    ${buttonContaCobrar}    ${buttonVoltarConta}
+    Swipe para cima Y
+    Checar se elementos estão visíveis    ${historico2}    ${historico3}    ${historico4}

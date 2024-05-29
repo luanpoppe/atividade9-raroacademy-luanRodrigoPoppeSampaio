@@ -26,6 +26,9 @@ Aguarda a página de cartão de crédito carregar
 Swipe opcoes cartao de credito
     Swipe para esquerda X    20    80
 
+Quando clicar na opção de retornar da seção de cartão de crédito
+    Aguardar para clicar no elemento    ${botaoVoltarCartaoCredito}
+
 Então deve ser possível ver informações sobre a fatura atual
     Aguarda a página de cartão de crédito carregar
     Page Should Contain Element    ${telaCartaoCredito}
@@ -49,6 +52,3 @@ Então deve ser possível ver o histórico de transferências
     O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[3]    content-desc    Pix
     O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[4]    content-desc    Transferência enviada\nOntem
     O atributo do elemento deve conter texto    xpath=//android.widget.ScrollView/*[4]    content-desc    Pix
-
-Quando clicar na opção de retornar da seção de cartão de crédito
-    Aguardar para clicar no elemento    ${botaoVoltarCartaoCredito}

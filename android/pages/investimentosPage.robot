@@ -15,13 +15,13 @@ ${botaoVoltarInvestimentos}    xpath=//android.widget.FrameLayout/android.widget
 Aguardar tela de investimentos carregar
     Wait Until Page Contains Element     ${telaInvestimentos}
 
+Quando clicar na opção de retornar da seção de investimentos
+    Aguardar para clicar no elemento    ${botaoVoltarInvestimentos}
+
 Então deve ser possível ver as informações sobre investimentos
     Wait Until Page Contains Element    ${telaInvestimentos}
     Wait Until Page Contains Element    ${imagemTituloInvestimentos}
     Checar se elementos estão visíveis    ${imagemTituloInvestimentos}    ${tituloInvestimentos}    ${descricaoInvestimentos1}    ${descricaoInvestimentos2}    ${botaoAvançarInvestimentos}
-
-Quando clicar na opção de retornar da seção de investimentos
-    Aguardar para clicar no elemento    ${botaoVoltarInvestimentos}
 
 Então o aplicativo deve retornar à sua página inicial onde se encontrava
     Set Test Variable    ${botaoInvestimentos}    xpath=//android.view.View[@content-desc="Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital."]

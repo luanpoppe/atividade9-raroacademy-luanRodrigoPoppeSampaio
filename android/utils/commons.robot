@@ -14,11 +14,6 @@ Espera o elemento para fazer o inputtext
     Wait Until Element Is Visible    ${elemento}
     Input Text                       ${elemento}    ${texto}
 
-Get Element Content Desc
-    [Arguments]    ${elemento}
-    ${texto}=    Get Element Attribute    ${elemento}    content-desc
-    RETURN    ${texto}
-
 Swipe para esquerda X
     [Arguments]    ${valorXFinal}=20    ${valorY}=20    ${valorXInicial}=70
     Swipe By Percent    ${valorXInicial}    ${valorY}    ${valorXFinal}    ${valorY}

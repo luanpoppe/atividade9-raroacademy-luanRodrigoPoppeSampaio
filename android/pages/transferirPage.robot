@@ -8,6 +8,13 @@ ${botaoVoltarTransferencia}    xpath=//android.widget.EditText/android.view.View
 ${botaoQRCodeTransferencia}    xpath=//android.widget.EditText/android.view.View/android.widget.Button[2]
 
 *** Keywords ***
+Quando tentar digitar letras como valor a ser transferido
+    Wait Until Page Contains Element    ${telaTransferir}
+    Input Text    ${telaTransferir}    55abc60
+Quando tentar digitar um valor com mais de 14 dígitos
+    Wait Until Page Contains Element    ${telaTransferir}
+    Input Text    ${telaTransferir}    12345678901234
+    Input Text    ${telaTransferir}    5678
 
 Então deve ser possível ver as informações sobre a seção de transferir
     Wait Until Page Contains Element    ${telaTransferir}
@@ -22,17 +29,8 @@ E deve ser possível digitar um valor a ser transferido
     Input Text    ${telaTransferir}    5560
     Wait Until Keyword Succeeds    4    1    AppiumLibrary.Element Text Should Be    ${telaTransferir}    R$ 55,60
 
-Quando tentar digitar letras como valor a ser transferido
-    Wait Until Page Contains Element    ${telaTransferir}
-    Input Text    ${telaTransferir}    55abc60
-
 Então as letras digitadas não devem ser consideradas para a transferência
     Wait Until Keyword Succeeds    4    1    AppiumLibrary.Element Text Should Be    ${telaTransferir}    R$ 55,60
-
-Quando tentar digitar um valor com mais de 14 dígitos
-    Wait Until Page Contains Element    ${telaTransferir}
-    Input Text    ${telaTransferir}    12345678901234
-    Input Text    ${telaTransferir}    5678
 
 Então só os primeiros 14 dígitos devem ser mostrados no valor para transferência
     Wait Until Keyword Succeeds    4    1    AppiumLibrary.Element Text Should Be    ${telaTransferir}    R$ 123.456.789.012,34
