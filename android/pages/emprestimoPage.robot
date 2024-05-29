@@ -20,7 +20,7 @@ Quando clicar no botão de voltar da seção de empréstimo
 
 Então deve ser possível ver as informações sobre empréstimo
     Wait Until Page Contains Element    ${telaEmprestimo}
-    Wait Until Page Contains Element    ${botaoVoltarEmprestimo}
+    Wait Until Keyword Succeeds    4    1    Wait Until Page Contains Element    ${botaoVoltarEmprestimo}
     Checar se elementos estão habilitados e visíveis    ${botaoVoltarEmprestimo}    ${botaoAjudaEmprestimo}    ${tituloEmprestimo}    ${descricaoEmprestimo}    ${botaoEntendaComoFunciona}
     Checar se elementos estão visíveis    ${botaoNovoEmprestimo}
 Então deve ser possível ver a mensagem informando que o usuário não possui empréstimos
