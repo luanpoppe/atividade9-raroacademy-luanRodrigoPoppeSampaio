@@ -28,3 +28,8 @@ Usuário deve poder acessar a seção de empréstimo acessando a funcionalidade 
     Dado que o usuário acessou a página inicial do Aplicativo
     Quando acessar a funcionalidade de empréstimo vista ao scrollar para baixo
     Então deve ser possível ver as informações sobre empréstimo
+
+Usuário deve conseguir retornar da seção de pix para a página inicial ao clicar no X
+    Dado que o usuário acessou a seção de empréstimos
+    Quando clicar no botão de voltar da seção de empréstimo
+    Então o aplicativo deve retornar à sua página inicial

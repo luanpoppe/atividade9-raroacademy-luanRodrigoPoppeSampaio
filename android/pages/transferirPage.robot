@@ -4,6 +4,8 @@ Library    XML
 Resource    ../base.robot
 *** Variables ***
 ${telaTransferir}        xpath=//android.widget.EditText
+${botaoVoltarTransferencia}    xpath=//android.widget.EditText/android.view.View/android.widget.Button[1]
+${botaoQRCodeTransferencia}    xpath=//android.widget.EditText/android.view.View/android.widget.Button[2]
 
 *** Keywords ***
 
@@ -13,6 +15,8 @@ Então deve ser possível ver as informações sobre a seção de transferir
     
     O atributo do elemento deve conter texto    ${telaTransferir}    hint    Qual é o valor da transferência?\nSaldo disponível em conta R$
     AppiumLibrary.Element Text Should Be    ${telaTransferir}    R$ 0,00
+
+    Checar se elementos estão habilitados e visíveis    ${botaoQRCodeTransferencia}
 
 E deve ser possível digitar um valor a ser transferido
     Input Text    ${telaTransferir}    5560

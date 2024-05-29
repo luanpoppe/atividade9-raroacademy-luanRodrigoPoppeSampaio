@@ -20,3 +20,13 @@ Na seção cobranças não deve ser possível digitar mais do que 14 números
     Dado que o usuário acessou a seção de cobranças
     Quando tentar digitar um valor de cobrança com mais de 11 números
     Então o número considerado só deverá conter os primeiros 14 valores digitados
+
+Usuário deve conseguir retornar da seção de cobranças para a página inicial ao clicar no X
+    Dado que o usuário acessou a seção de cobranças
+    Quando clicar no botão X    ${botaoVoltarCobrancas}
+    Então o aplicativo deve retornar à sua página inicial
+
+Usuário deve conseguir retornar da seção de cobranças para a página inicial ao scrollar para baixo
+    Dado que o usuário acessou a seção de cobranças
+    Quando scrollar para baixo    ${telaCobranca}
+    Então o aplicativo deve retornar à sua página inicial

@@ -11,11 +11,11 @@ Usuário deve conseguir acessar a funcionalidade de pix
     Então deve ser possível ver as informações sobre a funcionalidade de pix
 
 Usuário deve conseguir retornar da seção de pix para a página inicial ao clicar no X
-    Quando o usuário acessar a seção de Pix
-    E clicar no botão X    ${botaoVoltarPix}
+    Dado que o usuário acessou a seção de pix
+    Quando clicar no botão X    ${botaoVoltarPix}
     Então o aplicativo deve retornar à sua página inicial
 
-Usuário deve conseguir retornar da seção de pix para a página inicial scrollar para baixo
-    Quando o usuário acessar a seção de Pix
-    E scrollar para baixo    ${telaPix}
+Usuário deve conseguir retornar da seção de pix para a página inicial ao scrollar para baixo
+    Dado que o usuário acessou a seção de pix
+    Quando scrollar para baixo    ${telaPix}
     Então o aplicativo deve retornar à sua página inicial

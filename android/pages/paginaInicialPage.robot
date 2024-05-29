@@ -205,7 +205,7 @@ Dado que o usuário acessou a funcionalidade de conta da página inicial
     Quando usuário acessar a página inicial do Aplicativo
     E clicar na funcionalidade de conta
 
-Dado que o usuário acessou a seção de transferir
+Dado que o usuário acessou a seção de transferências
     Dado que o usuário acessou a página inicial do Aplicativo
     Quando acessar a seção de transferir
 
@@ -216,3 +216,29 @@ Dado que o usuário acessou a seção de cobranças
 Dado que o usuário acessou a seção de pagamentos
     Dado que o usuário acessou a página inicial do Aplicativo
     Quando acessar a seção de pagar
+
+Dado que o usuário acessou a seção de cartão de crédito
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a funcionalidade que mostra as informações sobre cartão de crédito
+
+Dado que o usuário acessou a seção de pix
+    Quando usuário acessar a página inicial do Aplicativo
+    Quando acessar a funcionalidade do pix
+Dado que o usuário acessou a seção de depósitos
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a seção de depositar
+Dado que o usuário acessou a seção de empréstimos
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a seção de empréstimos
+
+Dado que o usuário acessou a seção de indicação de amigos
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando clicar no botão de indicar amigos
+
+Dado que o usuário acessou a seção de investimentos
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a funcionalidade de investimentos ao scrollar para baixo
+
+Dado que o usuário acessou a seção de recarga de celular
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a seção de recarga de celular

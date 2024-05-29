@@ -4,6 +4,7 @@ Resource    ../base.robot
 *** Variables ***
 ${telaIndicarAmigos}        xpath=//android.widget.ImageView[@content-desc="Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia"]
 ${botaoIndicarAmigos}    xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
+${botaoVoltarIndicacaoAmigos}    xpath=//android.widget.ImageView/android.widget.Button[1]
 
 
 

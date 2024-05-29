@@ -32,3 +32,8 @@ Usuário deve poder acessar a seção de cobranças através da tela de conta
     Quando clicar na funcionalidade para acessar a seção de cobranças
     Então usuário deve ver a instrução da cobrança
     E deve ser possível digitar qual o número será cobrado
+
+Usuário deve conseguir retornar da seção de conta para a página inicial ao clicar no botão de voltar
+    Dado que o usuário acessou a funcionalidade de conta da página inicial
+    Quando clicar na opção de retornar da seção de conta
+    Então o aplicativo deve retornar à sua página inicial

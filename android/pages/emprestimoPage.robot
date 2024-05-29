@@ -15,6 +15,9 @@ ${mensagemNaoHaEmprestimos}    xpath=//android.view.View[@content-desc="Você n�
 
 *** Keywords ***
 
+Quando clicar no botão de voltar da seção de empréstimo
+    Aguardar para clicar no elemento    ${botaoVoltarEmprestimo}
+
 Então deve ser possível ver as informações sobre empréstimo
     Wait Until Page Contains Element    ${telaEmprestimo}
     Wait Until Page Contains Element    ${botaoVoltarEmprestimo}
@@ -23,8 +26,3 @@ Então deve ser possível ver as informações sobre empréstimo
 Então deve ser possível ver a mensagem informando que o usuário não possui empréstimos
     Wait Until Page Contains Element    ${mensagemNaoHaEmprestimos}
     Checar se elementos estão visíveis    ${mensagemNaoHaEmprestimos}
-
-
-
-
-

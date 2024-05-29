@@ -4,6 +4,7 @@ Library    XML
 Resource    ../base.robot
 *** Variables ***
 ${telaCobranca}        xpath=//android.widget.EditText
+${botaoVoltarCobrancas}    xpath=//android.widget.Button
 
 *** Keywords ***
 

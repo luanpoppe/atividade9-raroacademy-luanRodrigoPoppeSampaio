@@ -50,3 +50,6 @@ Quando clicar na funcionalidade para acessar a seção de empréstimos
     Wait Until Keyword Succeeds    4    1    Aguardar para clicar no elemento    ${buttonContaEmprestimos}
 Quando clicar na funcionalidade para acessar a seção de cobranças
     Wait Until Keyword Succeeds    4    1    Aguardar para clicar no elemento    ${buttonContaCobrar}
+
+Quando clicar na opção de retornar da seção de conta
+    Aguardar para clicar no elemento    ${buttonVoltarConta}

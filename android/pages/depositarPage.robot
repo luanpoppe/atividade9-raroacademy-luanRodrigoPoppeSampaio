@@ -8,6 +8,7 @@ ${botaoPixDepositar}    xpath=//android.view.View[@content-desc="Pix\nSem custo 
 ${botaoBoletoDepositar}    xpath=//android.view.View[@content-desc="Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair."]
 ${botaoTedDocDepositar}    xpath=//android.view.View[@content-desc="TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis."]
 ${botaoTrazerSeuSalario}    xpath=//android.view.View[@content-desc="Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo."]
+${botaoVoltarDepositos}    xpath=//android.widget.Button
 
 *** Keywords ***
 
