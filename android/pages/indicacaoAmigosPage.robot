@@ -9,7 +9,7 @@ ${botaoIndicarAmigos}    xpath=//android.widget.Button[@content-desc="INDICAR AM
 
 *** Keywords ***
 
-Então devo ver as informações sobre a funcionalidade de indicação e amigos
+Então deve ser possível ver as informações sobre a funcionalidade de indicação de amigos
     Wait Until Page Contains Element    ${botaoIndicarAmigos}
     Page Should Contain Element    ${telaIndicarAmigos}
     Element Should Be Visible    ${botaoIndicarAmigos}
