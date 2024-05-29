@@ -4,10 +4,10 @@ Resource    ../base.robot
 
 *** Keywords ***
 
-Espera o elemento para clicar
+Aguardar para clicar no elemento
     [Arguments]    ${elemento}
     Wait Until Element Is Visible    ${elemento}
-    Click Element                    ${elemento}
+    Click Element    ${elemento}
 
 Espera o elemento para fazer o inputtext
     [Arguments]    ${elemento}    ${texto}
