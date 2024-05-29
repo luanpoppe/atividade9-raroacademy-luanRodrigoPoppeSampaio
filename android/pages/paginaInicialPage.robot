@@ -66,10 +66,18 @@ E clicar no botão X
     Wait Until Page Contains Element    ${elemento}
     Aguardar para clicar no elemento    ${elemento}
 
+Quando clicar no botão X
+    [Arguments]    ${elemento}
+    E clicar no botão X    ${elemento}
+
 E scrollar para baixo
     [Arguments]    ${elementoAguardado}
     Wait Until Page Contains Element    ${elementoAguardado}
     Swipe By Percent    50    20    50    80
+
+Quando scrollar para baixo
+    [Arguments]    ${elementoAguardado}
+    E scrollar para baixo    ${elementoAguardado}
 
 # BDD
 Quando usuário acessar a página inicial do Aplicativo
@@ -196,3 +204,15 @@ Então os valores da conta e do cartão de crédito devem ser ocultados
 Dado que o usuário acessou a funcionalidade de conta da página inicial
     Quando usuário acessar a página inicial do Aplicativo
     E clicar na funcionalidade de conta
+
+Dado que o usuário acessou a seção de transferir
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a seção de transferir
+
+Dado que o usuário acessou a seção de cobranças
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a seção de cobranças
+
+Dado que o usuário acessou a seção de pagamentos
+    Dado que o usuário acessou a página inicial do Aplicativo
+    Quando acessar a seção de pagar

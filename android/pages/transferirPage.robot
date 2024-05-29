@@ -18,14 +18,14 @@ E deve ser possível digitar um valor a ser transferido
     Input Text    ${telaTransferir}    5560
     Wait Until Keyword Succeeds    4    1    AppiumLibrary.Element Text Should Be    ${telaTransferir}    R$ 55,60
 
-E tentar digitar letras como valor a ser transferido
+Quando tentar digitar letras como valor a ser transferido
     Wait Until Page Contains Element    ${telaTransferir}
     Input Text    ${telaTransferir}    55abc60
 
 Então as letras digitadas não devem ser consideradas para a transferência
     Wait Until Keyword Succeeds    4    1    AppiumLibrary.Element Text Should Be    ${telaTransferir}    R$ 55,60
 
-E tentar digitar um valor com mais de 14 dígitos
+Quando tentar digitar um valor com mais de 14 dígitos
     Wait Until Page Contains Element    ${telaTransferir}
     Input Text    ${telaTransferir}    12345678901234
     Input Text    ${telaTransferir}    5678

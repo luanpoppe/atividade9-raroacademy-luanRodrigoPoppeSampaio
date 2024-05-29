@@ -39,7 +39,7 @@ E deve ser possível ver as opções referentes à fatura e cartões de crédito
     Checar se elementos estão habilitados e visíveis    ${botaoBloquearCartaoCredito}    ${botaoIndicarAmigosCartaoCredito}
 
 
-E deve ser possível ver o histórico de transferências
+Então deve ser possível ver o histórico de transferências
     Aguarda a página de cobrança carregar
     Swipe para cima Y    30    50    80
 
